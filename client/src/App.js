@@ -14,19 +14,23 @@ class App extends Component {
   };
 
   removeFriend = id => {
+    friends.forEach(friendObject =>{ 
+      if (id === friendObject.id){
+        if (friendObject.clicked === false){
+         
+          friendObject.clicked = true;
+          this.setState( {friends, score: this.state.score +1, topscore: this.state.topscore +1 });
+        }
+      else if (id === friendObject.id && friendObject.clicked === true){
+        
+          this.setState( {score: 0 });
+          friends.clicked = false;
+        }
+      }
+    });
    
-this.setState( {friends, score: this.state.score +1 });
-this.setState( {friends, topscore: this.state.topscore +1})
-
-friends.sort(() => Math.random() - 0.5);
-
-
-
-
+    friends.sort(() => Math.random() - 0.5);
   };
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
-
 
   
   render() {
