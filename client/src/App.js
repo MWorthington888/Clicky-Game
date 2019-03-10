@@ -14,13 +14,9 @@ class App extends Component {
   };
 
   removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-
-
-      // this.state.score++;
+   
 this.setState( {friends, score: this.state.score +1 });
+this.setState( {friends, topscore: this.state.topscore +1})
 
 friends.sort(() => Math.random() - 0.5);
 
@@ -30,15 +26,15 @@ friends.sort(() => Math.random() - 0.5);
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
+
+
+  
   render() {
     return (
 
-
-     
+   
       <Wrapper>
-        {/* <Navbar> */}
 
-          {/* </Navbar> */}
         <Title>Crazy colors!! Click on a color and get a point. But don't click on the same color twice! <br></br>Score: { this.state.score} Top score: {this.state.topscore} </Title>
        
 
