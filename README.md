@@ -34,11 +34,10 @@ This app was written to show the working relationships between Components and th
 
 Components were created from templates from Stu_HelloBootstrap and Stu_FriendRefactor activities (Week 19 Activities 18 and 29 respectively). 
 
-
 This app is deployed remotely to Heroku.
 
--------------------
-Future developments:
--------------------
+Known Bugs to fix
+---------------
+There is an issue with the TopScores updating when a new top score is achieved. I will continue to work on this issue. 
 
 

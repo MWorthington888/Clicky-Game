@@ -27,6 +27,7 @@ class App extends Component {
           friends.clicked = false;
         }
       }
+
     });
    
     friends.sort(() => Math.random() - 0.5);
